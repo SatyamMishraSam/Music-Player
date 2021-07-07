@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
+
+*,
+*::before,
+*::after {
+    margin:0;
+    padding : 0%;
+    box-sizing:border-box;
+}
+h1 {
+    text-align: left;
+}
+html{
+    font-size: 65%;
+    font-family: "Jost" , sans-serif;
+}
+
+.main_div{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(182, 92, 76);
+    display: grid;
+    place-items: center;
+}
+
+.music_container{
+    width: 40rem;
+    height: 58rem;
+    background-color: rgb(157, 219, 196);
+    border-radius: 3rem;
+    box-shadow: 0 1.2rem 3rem 0.5rem rgba(55, 53, 170, 0.794);
+    padding: 3rem;
+    text-align: center;
+}
+
+
+
+.music_container #title{
+    text-transform: uppercase;
+    letter-spacing: 1.5rem; 
+    word-spacing: 0.5rem;
+    color: rgb(63, 30, 155);
+    margin:2rem 0 0.5rem 0;
+    font-size: 4rem;
+    font-weight: 500;
+    text-shadow: 0 0.3rem 0.5rem rgb(226, 16, 121);
+}
+
+.music_container #artist{
+    text-transform: uppercase;
+    
+    color:rgb(78, 67, 55);
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    font-weight: 300;
+}
+
+.img_container{
+    width: 25rem;
+    height: 25rem;
+    margin:auto;
+    
+}
+
+img{
+    width:100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 1.2rem 3rem 0.5rem rgba(231, 8, 8, 0.767);
+}
+.music_control{
+    width: 20rem;
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    margin: auto;
+    margin-top: 1rem; 
+}
+.music_control .fas{
+    color: rgb(70, 39, 98);
+    font-size: 2rem;
+    cursor: pointer;
+    filter: drop-shadow(0 1.2rem 3rem 0.5rem rgb(63, 42, 42));
+}
+
+/* round type play button */
+.music_control .play-button{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: rgb(204, 53, 48);
+    color: rgb(40, 161, 172);
+/* making play button to center of round */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.music_control .fas:hover{
+    color: rgb(231, 14, 231);
+}
+
+.music_control .fa-play:hover{
+    background-color: rgb(45, 219, 53);
+    color: rgb(226, 19, 19);
+    box-shadow: 0 1rem 2rem 0.2rem rgb(47, 34, 34);
+}
+
+/* animation */
+
+.anime{
+    animation: rotatePlayer 5s linear infinite;
+}
+
+@keyframes rotatePlayer{
+    from{ transform: rotate(0deg)}
+
+    to{ transform: rotate(360deg)}
+}
+
+.progressBar{
+    width:100%;
+    height: auto;
+    padding: 1rem 0;
+    margin-top: 1rem;
+}
+
+.progress_div{
+    width: 100%;
+    height: 0.5rem;
+    box-shadow: 0 1px 2px rgb(245, 104, 9);
+
+    border-radius: 4rem;
+    position: relative;
+    margin-top: 0.5rem;
+    transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    -webkit-transition: all 1s linear;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.progress{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: black;
+    border-radius: 4rem;
+   
+    /* transition: width 1s linear;
+    -moz-transition: width 1s linear;
+    -o-transition: width 1s linear;
+    -webkit-transition: width 1s linear; */
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.progress_duration{
+    display: flex;
+    justify-content: space-between;    
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
